@@ -21,6 +21,7 @@ mongoose
     .then(console.log("connected to mongoDB"))
     .catch((err) => console.log(err));
 
+// FILE UPLOAD
 const storage = multer.diskStorage({
     destination: (req, file, fn) => {
         fn(null, "images");
@@ -36,6 +37,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
     res.status(200).json("File has been uploaded");
 });
 
+//API ROUTES
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
