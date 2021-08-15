@@ -1,5 +1,5 @@
 import "./Hero.css";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 export default function Hero() {
     return (
         <div className="Hero container">
@@ -10,7 +10,9 @@ export default function Hero() {
                 It's easy and free, sharing knowledge is the best thing you can
                 do!
             </p>
-            <Link className="Hero-btn" to="/register">Start Writing Now</Link>
+            <Link className="Hero-btn" to="/login">
+                Start Writing Now
+            </Link>
         </div>
     );
 }

@@ -1,0 +1,21 @@
+.Profile-card {
+    background: white;
+    padding: 0.5em 1em;
+    display: none;
+    max-width: 350px;
+    min-width: 200px;
+    display: none;
+    border-radius: 5px;
+    border-top: 1em solid plum;
+    margin-left: 1em;
+}
+
+@media (min-width: 800px) {
+    .Profile-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        right: 15%;
+    }
+}

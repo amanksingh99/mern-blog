@@ -8,26 +8,26 @@ export default function Register() {
             <Card>
                 <h1>Register</h1>
                 <form>
-                    <label htmlFor="Login__username">Username</label>
+                    <label htmlFor="Register__username">Username</label>
                     <br />
                     <input
-                        id="Login__username"
+                        id="Register__username"
                         type="text"
                         placeholder="enter your username"
                     />
 
-                    <label htmlFor="Login__email">Email</label>
+                    <label htmlFor="Register__email">Email</label>
                     <br />
                     <input
-                        id="Login__email"
+                        id="Register__email"
                         type="email"
                         placeholder="enter your email"
                     />
 
-                    <label htmlFor="Login__password">Password</label>
+                    <label htmlFor="Register__password">Password</label>
                     <br />
                     <input
-                        id="Login__password"
+                        id="Register__password"
                         type="password"
                         placeholder="enter your password"
                     />

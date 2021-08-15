@@ -35,6 +35,11 @@ label {
     margin-top: 10px;
 }
 
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
