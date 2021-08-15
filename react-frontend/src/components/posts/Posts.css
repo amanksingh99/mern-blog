@@ -1,3 +1,7 @@
+.Posts h2 {
+    text-align: center;
+}
+
 .Posts > div {
     display: grid;
 }

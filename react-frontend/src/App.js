@@ -5,7 +5,7 @@ import Header from "./components/header/Header";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 function App() {
-    const isLoggedIn = false;
+    // const isLoggedIn = false;
     return (
         <>
             <Header />

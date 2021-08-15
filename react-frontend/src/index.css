@@ -17,8 +17,43 @@ p {
     line-height: 1.6;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+input {
+    width: 100%;
+    padding: 1em;
+    display: block;
+}
+
+label {
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+}
+
+.Form h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.Form a {
+    color: teal;
+    text-decoration: underline;
 }

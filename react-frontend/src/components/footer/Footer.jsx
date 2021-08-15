@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Footer.css";
-
+import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <footer className="Footer">
@@ -13,8 +13,12 @@ export default function Footer() {
                         the global dev community!
                     </p>
                     <div>
-                        <button className="btn btn-primary">Start A Blog</button>
-                        <button className="btn btn-white">Sign In</button>
+                        <Link to="/register" className="btn btn-primary">
+                            Start A Blog
+                        </Link>
+                        <Link to="/login" className="btn btn-white">
+                            Sign In
+                        </Link>
                     </div>
                     <small>
                         <em>Join the community of developers.</em>

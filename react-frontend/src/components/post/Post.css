@@ -9,12 +9,12 @@
         rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding-bottom: 1em;
     cursor: pointer;
-    transform: scale(0.9);
+    transform: scale(0.99);
     transition: transform 0.3s;
 }
 
 .Post:hover {
-    transform: scale(.92);
+    transform: scale(1);
 }
 
 .Post small {
