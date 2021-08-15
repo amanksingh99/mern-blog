@@ -1,0 +1,30 @@
+.Hero {
+
+    border-bottom: 1px solid #333;
+    padding: 2em 0;
+}
+
+.Hero h1 {
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.3;
+    font-family: serif;
+}
+
+.Hero h1 em {
+    color: tomato;
+}
+
+.Hero p {
+    margin-top: 0;
+    color: rgba(0,0,0,0.8);
+}
+
+.Hero button {
+    border: 2px solid #333;
+    background-color: white;
+    border-radius: 10px;
+    padding: .8em 1.5em;
+    font-size: 1rem;
+    cursor: pointer;
+}

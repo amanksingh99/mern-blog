@@ -1,0 +1,59 @@
+.Footer {
+    background-color: #fff;
+    border-top: 1px solid lightgray;
+    margin-top: 3em;
+}
+
+.btn {
+    padding: 1em 1.8em;
+    border: none;
+    margin-right: 1em;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: white;
+    background-color: tomato;
+}
+
+.btn-white {
+    background: white;
+    border: 1px solid gray;
+}
+
+.Footer__branding {
+    padding: 2em 0;
+}
+
+.Footer__branding h2 {
+    margin: 0;
+}
+.Footer__branding p {
+    color: #616161;
+}
+
+.Footer__copyright {
+    border-top: inherit;
+    font-size: 14px;
+}
+
+.Footer__copyright .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 0;
+}
+
+.Footer__left {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.Footer__right a {
+    text-decoration: none;
+    color: #333;
+}
+
+.Footer__right a:first-child {
+    margin-right: 1em;
+}

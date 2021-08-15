@@ -1,0 +1,14 @@
+.Button {
+    padding: 1em 1.5em;
+    border: 0;
+}
+
+.Button--teal {
+    width: 100%;
+    padding: 1em 1.5em;
+    background-color: teal;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 1em;
+}

@@ -1,0 +1,16 @@
+.Posts > div {
+    display: grid;
+}
+
+@media (min-width: 700px) {
+    .Posts > div {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 2em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .Posts > div {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
