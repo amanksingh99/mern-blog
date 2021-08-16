@@ -7,7 +7,6 @@ import Register from "./pages/register/Register";
 import Blog from "./pages/blog/Blog";
 import Create from "./pages/create/Create";
 function App() {
-    // const isLoggedIn = false;
     return (
         <>
             <Header />
@@ -21,10 +20,10 @@ function App() {
                 <Route path="/register">
                     <Register />
                 </Route>
-                <Route path="/blog/:id">
+                <Route path="/post/:id">
                     <Blog />
                 </Route>
-                <Route>
+                <Route path="/create">
                     <Create />
                 </Route>
             </Switch>

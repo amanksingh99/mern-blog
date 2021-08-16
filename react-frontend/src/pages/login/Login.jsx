@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import Card from "../../components/card/Card";
 import Button from "../../components/button/Button";
+import { useState } from "react";
 export default function Login() {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
     return (
         <main className="Form container">
             <Card>
@@ -13,6 +16,8 @@ export default function Login() {
                         id="Login__username"
                         type="text"
                         placeholder="enter your username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value.trim())}
                     />
                     {/* <br /> */}
                     <label htmlFor="Login__password">Password</label>
@@ -21,6 +26,8 @@ export default function Login() {
                         id="Login__password"
                         type="password"
                         placeholder="enter your password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                     />
                     {/* <br /> */}
                     <small>

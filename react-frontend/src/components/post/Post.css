@@ -29,12 +29,21 @@
     border-top-right-radius: inherit;
 }
 
+.Post__categories {
+    margin: 0 1em;
+    margin-top: 1em;
+}
+.Post__categories > * {
+    margin-right: 1em;
+}
+
 .Post__content {
     padding: 0 1.2em;
 }
 
 .Post__title {
     margin-bottom: 0;
+    margin-top: 0.5em;
 }
 .Post__body {
     margin-top: 1em;
