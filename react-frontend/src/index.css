@@ -40,6 +40,11 @@ img {
     object-fit: cover;
 }
 
+textarea {
+    width: 100%;
+
+}
+
 .container {
     width: 90%;
     max-width: 1200px;

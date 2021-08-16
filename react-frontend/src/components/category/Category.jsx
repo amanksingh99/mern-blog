@@ -1,10 +1,15 @@
 export function Category({ name = "programming", color = "white" }) {
-    let bgcolor =
-        name === "programming"
-            ? "plum"
-            : name === "javascript"
-            ? "yellow"
-            : "tomato";
+    let bgcolor;
+    switch (name) {
+        case "C++":
+            bgcolor = "#11052C";
+            break;
+        case "Java":
+            bgcolor = "#3D087B";
+            break;
+        default:
+            bgcolor = "tomato";
+    }
     const categoryStyle = {
         backgroundColor: bgcolor,
         padding: "0.5em 0.7em",

@@ -1,0 +1,32 @@
+.imageUploadIcon {
+    cursor: pointer;
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.Blog-title {
+    border: none;
+    font-size: 2rem;
+    padding: 5px 0;
+    font-weight: 900;
+    margin-bottom: 0;
+}
+
+.Blog-date {
+    margin-top: 0;
+}
+.Blog-title:focus {
+    outline: none;
+}
+
+.Blog-para {
+    min-height: 50vh;
+    padding: 10px;
+}
+
+@media (min-width: 800px) {
+    .imageUploadIcon {
+        margin-left: 1em;
+    }
+}

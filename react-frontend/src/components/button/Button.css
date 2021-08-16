@@ -11,4 +11,9 @@
     color: white;
     font-weight: bold;
     margin-top: 1em;
+    transition: background 0.3s;
+}
+
+.Button--teal:hover {
+    background-color: rgb(3, 102, 102);
 }

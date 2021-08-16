@@ -12,6 +12,7 @@
 }
 
 .Blog-container {
+    width: 100%;
     max-width: 800px;
     background: white;
 }
@@ -26,7 +27,8 @@
 .Blog__categories {
     display: flex;
     justify-content: flex-start;
-    margin-top: 1em;
+    margin: 1em 0;
+
 }
 .Blog__categories > * {
     margin-right: 1em;

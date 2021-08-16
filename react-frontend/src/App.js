@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Blog from "./pages/blog/Blog";
+import Create from "./pages/create/Create";
 function App() {
     // const isLoggedIn = false;
     return (
@@ -22,6 +23,9 @@ function App() {
                 </Route>
                 <Route path="/blog/:id">
                     <Blog />
+                </Route>
+                <Route>
+                    <Create />
                 </Route>
             </Switch>
         </>
