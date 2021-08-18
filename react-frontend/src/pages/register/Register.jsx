@@ -2,15 +2,33 @@ import React, { useState } from "react";
 import Card from "../../components/card/Card";
 import { Link } from "react-router-dom";
 import Button from "../../components/button/Button";
+import axios from "axios";
 export default function Register() {
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setError] = useState(false);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError(false);
+        try {
+            const res = await axios.post("/auth/register", {
+                username,
+                email,
+                password,
+            });
+            res.data && window.location.replace("/login");
+        } catch (err) {
+            setError(err);
+            setTimeout(() => setError(false), 3000);
+            console.log(err);
+        }
+    };
     return (
         <main className="Form container">
             <Card>
                 <h1>Register</h1>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="Register__username">Username</label>
                     <br />
                     <input
@@ -46,6 +64,9 @@ export default function Register() {
                         <Link to="/login">Sign In</Link>
                     </small>
                     <Button text="Submit" modifierClass="Button--teal" />
+                    <span style={{ color: "red" }}>
+                        {error && "Something went wrong"}
+                    </span>
                 </form>
             </Card>
         </main>
