@@ -17,3 +17,7 @@
 .Button--teal:hover {
     background-color: rgb(3, 102, 102);
 }
+
+.Button.disabled {
+    background-color: gray;
+}

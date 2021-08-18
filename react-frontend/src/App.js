@@ -6,7 +6,10 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Blog from "./pages/blog/Blog";
 import Create from "./pages/create/Create";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 function App() {
+    
     return (
         <>
             <Header />

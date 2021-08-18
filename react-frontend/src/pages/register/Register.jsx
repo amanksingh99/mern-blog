@@ -1,16 +1,35 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Card from "../../components/card/Card";
 import { Link } from "react-router-dom";
 import Button from "../../components/button/Button";
 import axios from "axios";
+import { useHistory } from "react-router-dom";
+import { Context } from "../../context/Context";
 export default function Register() {
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState(false);
+
+    const { user } = useContext(Context);
+    const history = useHistory();
+    useEffect(() => {
+        if (user) {
+            history.push("/");
+        }
+    });
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError(false);
+        if (
+            email.length === 0 ||
+            username.length === 0 ||
+            password.length === 0
+        ) {
+            setError("All fields are required! Please fill properly.");
+            setTimeout(() => setError(false), 3000);
+            return;
+        }
         try {
             const res = await axios.post("/auth/register", {
                 username,
@@ -19,7 +38,7 @@ export default function Register() {
             });
             res.data && window.location.replace("/login");
         } catch (err) {
-            setError(err);
+            setError("Something went wrong!");
             setTimeout(() => setError(false), 3000);
             console.log(err);
         }
@@ -64,10 +83,8 @@ export default function Register() {
                         <Link to="/login">Sign In</Link>
                     </small>
                     <Button text="Submit" modifierClass="Button--teal" />
-                    <span style={{ color: "red" }}>
-                        {error && "Something went wrong"}
-                    </span>
                 </form>
+                <span style={{ color: "red" }}>{error}</span>
             </Card>
         </main>
     );

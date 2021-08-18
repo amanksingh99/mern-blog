@@ -1,7 +1,12 @@
 import "./Button.css";
-export default function Button({ text, modifierClass = "", type = "text" }) {
+export default function Button({
+    text,
+    modifierClass = "",
+    type = "text",
+    ...props
+}) {
     return (
-        <button type={type} className={`Button ${modifierClass}`}>
+        <button {...props} type={type} className={`Button ${modifierClass}`}>
             {text}
         </button>
     );

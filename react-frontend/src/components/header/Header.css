@@ -43,6 +43,11 @@
     padding: 0.8em 1.5em;
 }
 
+.profile-pic {
+    width: 50px;
+    object-fit: cover;
+}
+
 @media (min-width: 700px) {
     .Header .container {
         padding: 1em 0;
@@ -50,5 +55,6 @@
 
     .Header__nav ul {
         display: flex;
+        align-items: center;
     }
 }

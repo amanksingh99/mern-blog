@@ -11,6 +11,27 @@
     margin: 0;
 }
 
+.Blog-heading-div {
+    display: flex;
+    justify-content: space-between;
+}
+.Blog-heading-div .icons {
+    font-size: 1.4rem;
+}
+.icon-edit,
+.icon-delete {
+    cursor: pointer;
+}
+
+.icon-edit {
+    color: green;
+    margin-right: 1em;
+}
+
+.icon-delete {
+    color: red;
+}
+
 .Blog-container {
     width: 100%;
     max-width: 800px;
@@ -28,7 +49,6 @@
     display: flex;
     justify-content: flex-start;
     margin: 1em 0;
-
 }
 .Blog__categories > * {
     margin-right: 1em;

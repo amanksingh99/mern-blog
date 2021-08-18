@@ -4,13 +4,14 @@ import { Category } from "../category/Category";
 import { Link } from "react-router-dom";
 export default function Post({ data }) {
     const createdDate = new Date(data.createdAt).toLocaleDateString();
+    const PF = "http://localhost:5000/images/";
     return (
         <Link to={`/post/${data._id}`}>
             {" "}
             <div className="Post">
                 <img
                     className="Post__image"
-                    src={data.photo ? data.photo : defaultImage}
+                    src={data.photo ? PF + data.photo : defaultImage}
                     alt="blog"
                 />
                 <div className="Post__categories">

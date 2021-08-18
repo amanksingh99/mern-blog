@@ -13,11 +13,23 @@ export default function Posts({ posts, search }) {
     return (
         <section className="Posts container">
             <h2>{heading} Posts</h2>
-            {search && <Link style={{color:"blue", textDecoration:"underline"}} to="/">All Posts</Link>}
+            {search && (
+                <Link
+                    style={{ color: "blue", textDecoration: "underline" }}
+                    to="/"
+                >
+                    All Posts
+                </Link>
+            )}
             <div>
-                {posts.map((data) => (
-                    <Post key={data._id} data={data} />
-                ))}
+                {posts
+                    .slice(0, 6)
+                    .sort((a, b) => {
+                        return new Date(b.createdAt) - new Date(a.createdAt);
+                    })
+                    .map((data) => (
+                        <Post key={data._id} data={data} />
+                    ))}
             </div>
         </section>
     );
