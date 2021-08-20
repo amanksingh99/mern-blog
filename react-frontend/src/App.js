@@ -8,6 +8,7 @@ import Blog from "./pages/blog/Blog";
 import Create from "./pages/create/Create";
 import { useContext } from "react";
 import { Context } from "./context/Context";
+import Settings from "./pages/settings/Settings";
 function App() {
     
     return (
@@ -28,6 +29,9 @@ function App() {
                 </Route>
                 <Route path="/create">
                     <Create />
+                </Route>
+                <Route path="/myaccount">
+                    <Settings/>
                 </Route>
             </Switch>
         </>

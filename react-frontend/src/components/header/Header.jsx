@@ -8,6 +8,7 @@ export default function Header() {
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });
     };
+    const PF = "http://localhost:5000/images/";
     return (
         <header className="Header">
             <div className="container">
@@ -45,10 +46,10 @@ export default function Header() {
                             Get Started
                         </Link>
                     ) : (
-                        <Link to="/settings">
+                        <Link to="/myaccount">
                             <img
                                 className="profile-pic"
-                                src={user.profilePic || defaultProfilePic}
+                                src={PF + user.profilePic || defaultProfilePic}
                                 alt="user profile"
                             />
                         </Link>

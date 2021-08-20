@@ -78,7 +78,8 @@ export default function Create() {
                             onChange={(e) => setTitle(e.target.value)}
                         />
                         <small className="Blog-date">
-                            by Aman Singh | {new Date().toLocaleDateString()}
+                            by {user.username} |{" "}
+                            {new Date().toLocaleDateString()}
                         </small>
                         <div className="Blog__categories">
                             {categories.map((text) => (

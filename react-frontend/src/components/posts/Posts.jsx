@@ -21,16 +21,25 @@ export default function Posts({ posts, search }) {
                     All Posts
                 </Link>
             )}
-            <div>
-                {posts
-                    .slice(0, 6)
-                    .sort((a, b) => {
-                        return new Date(b.createdAt) - new Date(a.createdAt);
-                    })
-                    .map((data) => (
-                        <Post key={data._id} data={data} />
-                    ))}
-            </div>
+            {posts.length === 0 ? (
+                <div className="noPostMessage">
+                    <span>NO POST FOUND</span>
+                </div>
+            ) : (
+                <div>
+                    {posts
+
+                        .sort((a, b) => {
+                            return (
+                                new Date(b.createdAt) - new Date(a.createdAt)
+                            );
+                        })
+                        .slice(0, 6)
+                        .map((data) => (
+                            <Post key={data._id} data={data} />
+                        ))}
+                </div>
+            )}
         </section>
     );
 }

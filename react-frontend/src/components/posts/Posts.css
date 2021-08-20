@@ -6,6 +6,12 @@
     display: grid;
 }
 
+.noPostMessage {
+    width: 100%;
+    text-align: center;
+    padding: 3em;
+}
+
 @media (min-width: 700px) {
     .Posts > div {
         grid-template-columns: 1fr 1fr;
