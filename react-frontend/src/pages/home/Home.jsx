@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import Hero from "../../components/hero/Hero";
 import Posts from "../../components/posts/Posts";
 import Footer from "../../components/footer/Footer";
-import axios from "axios";
 import { useLocation } from "react-router-dom";
+import axiosInstance from "../../config";
 export default function Home() {
     const [posts, setPosts] = useState([]);
     const location = useLocation();
@@ -11,7 +11,7 @@ export default function Home() {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const res = await axios.get("/posts" + search);
+            const res = await axiosInstance.get("/posts" + search);
             setPosts(res.data);
         };
         fetchPosts();

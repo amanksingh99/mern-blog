@@ -6,7 +6,7 @@ import Button from "../../components/button/Button";
 
 import { FaPlus } from "react-icons/fa";
 import "./Create.css";
-import axios from "axios";
+import axiosInstance from "axiosInstance";
 import { Context } from "../../context/Context";
 import { useHistory } from "react-router-dom";
 
@@ -38,13 +38,13 @@ export default function Create() {
             newPost.photo = filename;
 
             try {
-                await axios.post("/upload", data);
+                await axiosInstance.post("/upload", data);
             } catch (err) {
                 console.log(err);
             }
         }
         try {
-            const res = await axios.post("/posts", newPost);
+            const res = await axiosInstance.post("/posts", newPost);
             window.location.replace("/post/" + res.data._id);
         } catch (err) {
             console.log(err);

@@ -46,4 +46,10 @@ app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/categories", categoryRoutes);
 
-app.listen("5000", () => console.log("server started"));
+app.use(express.static(path.join(__dirname, "/react-fronted/build")));
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "/react-fronted/biuld", "index.html"));
+});
+
+app.listen(process.env.PORT || 5000, () => console.log("server started"));

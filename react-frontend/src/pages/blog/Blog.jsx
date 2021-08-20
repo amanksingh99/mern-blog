@@ -5,7 +5,7 @@ import blogImg from "../../components/hero/images/hero.jpg";
 import ProfileCard from "../../components/profileCard/ProfileCard";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axiosInstance from "../../config";
 import { RiEditBoxLine, RiDeleteBin6Line } from "react-icons/ri";
 import { Context } from "../../context/Context";
 import Button from "../../components/button/Button";
@@ -20,7 +20,7 @@ export default function Blog() {
     const { user } = useContext(Context);
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get(`/posts/${postId}`);
+            const res = await axiosInstance.get(`/posts/${postId}`);
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
@@ -30,7 +30,7 @@ export default function Blog() {
 
     const handleDelete = async () => {
         try {
-            await axios.delete(`/posts/${postId}`, {
+            await axiosInstance.delete(`/posts/${postId}`, {
                 data: { username: user?.username },
             });
             window.location.replace("/");
@@ -40,7 +40,7 @@ export default function Blog() {
     };
     const handleUpdate = async () => {
         try {
-            await axios.put(`/posts/${post._id}`, {
+            await axiosInstance.put(`/posts/${post._id}`, {
                 username: user?.username,
                 title,
                 desc,

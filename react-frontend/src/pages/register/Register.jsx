@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Card from "../../components/card/Card";
 import { Link } from "react-router-dom";
 import Button from "../../components/button/Button";
-import axios from "axios";
+import axiosInstance from "../../config";
 import { useHistory } from "react-router-dom";
 import { Context } from "../../context/Context";
 export default function Register() {
@@ -31,7 +31,7 @@ export default function Register() {
             return;
         }
         try {
-            const res = await axios.post("/auth/register", {
+            const res = await axiosInstance.post("/auth/register", {
                 username,
                 email,
                 password,

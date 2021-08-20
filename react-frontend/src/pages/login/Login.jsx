@@ -3,7 +3,7 @@ import Card from "../../components/card/Card";
 import Button from "../../components/button/Button";
 import { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
-import axios from "axios";
+import axiosInstance from "../../config";
 
 import { useHistory } from "react-router-dom";
 
@@ -25,7 +25,7 @@ export default function Login() {
         }
         dispatch({ type: "LOGIN_START" });
         try {
-            const res = await axios.post("/auth/login", {
+            const res = await axiosInstance.post("/auth/login", {
                 username,
                 password,
             });

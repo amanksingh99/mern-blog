@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../context/Context";
 import "./Settings.css";
-import axios from "axios";
-import { RiSettings2Fill, RiUserFill } from "react-icons/ri";
+import axiosInstance from "../../config";
+import { RiUserFill } from "react-icons/ri";
 import defaultProfilePic from "../../images/defaultProfilePic.png";
 export default function Settings() {
     const { user, dispatch } = useContext(Context);
@@ -51,11 +51,14 @@ export default function Settings() {
             data.append("file", file);
             updatedUser.profilePic = filename;
             try {
-                await axios.post("/upload", data);
+                await axiosInstance.post("/upload", data);
             } catch (err) {}
         }
         try {
-            const res = await axios.put("/users/" + user._id, updatedUser);
+            const res = await axiosInstance.put(
+                "/users/" + user._id,
+                updatedUser
+            );
             setSuccess(true);
             dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
         } catch (err) {
