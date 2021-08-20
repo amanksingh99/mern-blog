@@ -6,7 +6,7 @@ import Button from "../../components/button/Button";
 
 import { FaPlus } from "react-icons/fa";
 import "./Create.css";
-import axiosInstance from "axiosInstance";
+import axiosInstance from "../../config";
 import { Context } from "../../context/Context";
 import { useHistory } from "react-router-dom";
 
