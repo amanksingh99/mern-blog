@@ -53,7 +53,7 @@ export default function Blog() {
 
     const createdDate = new Date(post.createdAt).toLocaleDateString();
 
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://mern-blog-practice.herokuapp.com/images/";
     return (
         <main className="Blog">
             <div className="Blog-content container">

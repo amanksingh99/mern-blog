@@ -12,7 +12,7 @@ export default function Settings() {
     const [password, setPassword] = useState("");
     const [success, setSuccess] = useState(false);
     const [message, setMessage] = useState("");
-    const PF = "http://localhost:5000/images/";
+    const PF = "https://mern-blog-practice.herokuapp.com/images/";
 
     useEffect(() => {
         setEmail(user.email);
